@@ -1,0 +1,272 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Kara</title>
+
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="~/Content/sources/style.css">
+
+    <link rel="icon" type="image/x-icon" href="~/Content/sources/images/k-high-resolution-logo-white.png">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .contact-info {
+            background: #f9f9f9;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+            .contact-info h2 {
+                margin-bottom: 20px;
+            }
+
+        .contact-details {
+            margin-bottom: 10px;
+        }
+
+        #contact-form {
+            background: #f9f9f9;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+            .form-group input[type="text"],
+            .form-group input[type="email"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .form-group textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .form-group button[type="submit"] {
+                background: #333;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img src="../Content/sources/images/logo-black.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><a href="@Url.Action("ShopView", "Home")">Shop</a></li>
+                <li><a href="@Url.Action("AboutView", "Home")">About</a></li>
+                <li><a href="@Url.Action("ContactView", "Home")">Contact</a></li>
+                <li><a href="search.html"><i class="fas fa-search"></i> </a></li>
+                <li><a href="@Url.Action("Login", "LoginUser")"><i class="fas fa-user"></i></a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart" style="color: #000000;"></i></a></li>
+                <li class="format-hello">
+                    @if (Session["UserName"] == null)
+                    {
+                        <span>Hello</span>
+                    }
+                    else
+                    {
+                        <span><text>Hello  </text>@Session["UserName"]</span>
+                    }
+                </li>
+                <li><a href="@Url.Action("Logout", "LoginUser")"><i class="fas fa-sign-out-alt"></i></a></li>
+
+            </ul>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <div class="contact-info">
+
+            <h5>Contact Info</h5>
+
+            <div class="contact-details">
+
+                <strong>Address:</strong> 176 Cong Hoa street , ward 12 , Tân Bình district , Ho Chi Minh city
+
+            </div>
+
+            <div class="contact-details">
+
+                <strong>Tel và Zalo:</strong> <a href="tel://0913885457">0913885457</a>
+
+            </div>
+
+            <div class="contact-details">
+
+                <strong>Email:</strong> phucle9426@gmail.com
+
+            </div>
+
+            <div class="contact-details">
+
+                <strong>Facebook:</strong> <a href="https://www.facebook.com/PhucLe2735"> Phuc Le</a>
+
+            </div>
+
+            <div class="contact-details">
+
+                <strong>Instagram:</strong> <a href="https://www.instagram.com/_.phucle._/">_.phucle._</a>
+
+            </div>
+
+            <div class="contact-details">
+
+                <strong>Work Time:</strong> Monday to Sunday: 9:00 AM - 6:00 PM
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div id="contact-form">
+
+            <h5>Contact Us</h5>
+
+            <form action="process_form.php" method="post">
+
+                <div class="form-group">
+
+                    <label for="name">Full Name:</label>
+
+                    <input type="text" id="name" name="name" required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="email">Email:</label>
+
+                    <input type="email" id="email" name="email" required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="message">Content:</label>
+
+<textarea id="message" name="message" rows="5" required></textarea>
+
+                </div>
+
+                <div class="form-group">
+
+                    <button type="submit">Send</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <footer class="section-p1">
+
+            <div class="col">
+
+                <h7>About</h7>
+
+                <a href="#">About Us</a>
+
+                <a href="#">Delivery Information</a>
+
+                <a href="#">Privacy policy</a>
+
+                <a href="#">Terms & Conditions</a>
+
+                <a href="#">Contact Us</a>
+
+            </div>
+
+            <div class="col">
+
+                <h7>My Account</h7>
+
+                <a href="#">Sign In</a>
+
+                <a href="#">View Cart</a>
+
+                <a href="#">My Wishlist</a>
+
+                <a href="#">Track My Order</a>
+
+                <a href="#">Help</a>
+
+            </div>
+
+            <div class="col-install">
+
+                <p3>Install App</p3>
+
+                <p3>From App Store or Google Play</p3>
+
+                <div class="row">
+
+                    <img src="~/Content/sources/dowload/App_Store_(iOS)-Badge-Alternative-Logo.wine.png" width="200" height="150">
+
+                    <img src="~/Content/sources/dowload/Google_Play-Badge-Logo.wine.png" width="200" height="150">
+
+                </div>
+
+                <p3> Secured Payment Gateways </p3>
+
+                <img src="~/Content/sources/dowload/small.jpg">
+
+            </div>
+
+            <div class="copyright">
+
+                <p3> 2023, AE206 etc - HTML CSS Ecommerce Template</p3>
+
+            </div>
+            @RenderBody()
+
+        </footer>
+
+</body>
+
+</html>

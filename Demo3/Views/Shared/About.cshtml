@@ -1,0 +1,275 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="~/Content/sources/style.css">
+
+    <link rel="icon" type="image/x-icon" href="../Content/sources/images/k-high-resolution-logo-white.png">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+
+    <style>
+        h2 {
+            color: #000000;
+        }
+
+        p {
+            color: #000000;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-image {
+            width: auto;
+            height: auto;
+            margin-right: 50px;
+        }
+
+        .about-flex {
+            display: flex;
+            margin-bottom: 50px;
+        }
+
+        .about-text {
+            width: 50%;
+            border: 3px;
+            padding: 10px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+   <section id="header">
+    <a href="#"><img src="../Content/sources/images/logo-black.png" class="logo" alt=""></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+            <li><a href="@Url.Action("ShopView", "Home")">Shop</a></li>
+            <li><a href="@Url.Action("AboutView", "Home")">About</a></li>
+            <li><a href="@Url.Action("ContactView", "Home")">Contact</a></li>
+            <li><a href="search.html"><i class="fas fa-search"></i> </a></li>
+            <li><a href="@Url.Action("Login", "LoginUser")"><i class="fas fa-user"></i></a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart" style="color: #000000;"></i></a></li>
+            <li class="format-hello">
+                @if (Session["UserName"] == null)
+                {
+                    <span>Hello</span>
+                }
+                else
+                {
+                    <span><text>Hello  </text>@Session["UserName"]</span>
+                }
+            </li>
+            <li><a href="@Url.Action("Logout", "LoginUser")"><i class="fas fa-sign-out-alt"></i></a></li>
+            
+        </ul>
+    </div>
+</section>
+
+    <div class="container">
+
+        <div>
+
+            <div class="about-flex">
+
+                <img class="about-image" src="https://images.unsplash.com/photo-1698819718444-0d59d1011410?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D" alt="About Us Image">
+
+                <div class="about-text">
+
+                    <h2>WHO WE ARE?</h2>
+
+                    <p>
+                        KARA we are passionate about providing our customers with the latest and trendiest fashion
+
+                        pieces. Our team of dedicated fashion enthusiasts carefully curates our collection to offer you the best
+
+                        in style and quality.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="about-flex">
+
+                <img class="about-image" src="https://images.unsplash.com/photo-1697659984086-805972afd080?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDc5fFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D" alt="About Us Image">
+
+                <div class="about-text">
+
+                    <h2>Our Mission</h2>
+
+                    <p>
+                        Our mission is to empower individuals to express their unique style through fashion. We believe that
+
+                        clothing is not just a way to cover the body, but a form of self-expression and confidence. We strive to
+
+                        inspire and enable everyone to embrace their individuality and showcase their personality through the
+
+                        clothes they wear.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="about-flex">
+
+                <img class="about-image" src="https://images.unsplash.com/photo-1698790706733-75ed1a8fd60c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8UzRNS0xBc0JCNzR8fGVufDB8fHx8fA%3D%3D" alt="About Us Image">
+
+                <div class="about-text">
+
+                    <h2>Why Choose Us?</h2>
+
+                    <p>
+
+                        <li>Wide selection of trendy and high-quality clothing items</li>
+
+                        <li>Excellent customer service and support</li>
+
+                        <li>Fast and reliable worldwide shipping</li>
+
+                        <li>Regularly updated collections to keep you in style</li>
+
+                        <li>100% satisfaction guarantee</li>
+
+                    <p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="section-p1">
+
+        <div class="col">
+
+            <img class="logo" src="/../Content/sources/images/logo-black.png" width="100" height="100" alt="">
+
+            <h7>Contact</h7>
+
+            <p3>
+                <strong>Address: </strong>2443 Sierra Nevada Road, Mammoth Lakes CA 93546
+
+            </p3>
+
+            <p3>
+                <strong>Phone:</strong> kara:0704856946 genti:0967285710
+
+            </p3>
+
+            <p3><strong>Hours: </strong>10:00 - 18:00.Mon-Sat</p3>
+
+            <div class="follow">
+
+                <h7>follow us</h7>
+
+                <div class="icon">
+
+                    <i class="fab fa-facebook"></i>
+
+                    <i class="fab fa-instagram"></i>
+
+                    <i class="fab fa-youtube"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col">
+
+            <h7>About</h7>
+
+            <a href="#">About Us</a>
+
+            <a href="#">Delivery Information</a>
+
+            <a href="#">Privacy policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Contact Us</a>
+
+        </div>
+
+        <div class="col">
+
+            <h7>My Account</h7>
+
+            <a href="#">Sign In</a>
+
+            <a href="#">View Cart</a>
+
+            <a href="#">My Wishlist</a>
+
+            <a href="#">Track My Order</a>
+
+            <a href="#">Help</a>
+
+        </div>
+
+        <div class="col-install">
+
+            <p3>Install App</p3>
+
+            <p3>From App Store or Google Play</p3>
+
+            <div class="row">
+
+                <img src="../Content/sources/dowload/App_Store_(iOS)-Badge-Alternative-Logo.wine.png" width="200" height="150">
+
+                <img src="../Content/sources/dowload/Google_Play-Badge-Logo.wine.png" width="200" height="150">
+
+            </div>
+
+            <p3> Secured Payment Gateways </p3>
+
+            <img src="../Content/sources/dowload/small.jpg">
+
+        </div>
+
+        <div class="copyright">
+
+            <p3> 2023, AE206 etc - HTML CSS Ecommerce Template</p3>
+
+        </div>
+        @RenderBody()
+    </footer>
+
+</body>
+
+</html>

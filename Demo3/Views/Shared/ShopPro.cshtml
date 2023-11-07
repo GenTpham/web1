@@ -1,0 +1,229 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kara</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/Content/sources/style.css">
+    <link rel="icon" type="image/x-icon" href="../Content/sources/images/k-high-resolution-logo-white.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="../Content/sources/images/logo-black.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><a href="@Url.Action("ShopView", "Home")">Shop</a></li>
+                <li><a href="@Url.Action("AboutView", "Home")">About</a></li>
+                <li><a href="@Url.Action("ContactView", "Home")">Contact</a></li>
+                <li><a href="search.html"><i class="fas fa-search"></i> </a></li>
+                <li><a href="@Url.Action("Login", "LoginUser")"><i class="fas fa-user"></i></a></li>
+                <li><a href="/ShopCart/ShowCart"><i class="fas fa-shopping-cart" style="color: #000000;"></i></a></li>
+                <li class="format-hello">
+                    @if (Session["UserName"] == null)
+                    {
+                        <span>Hello</span>
+                    }
+                    else
+                    {
+                        <span><text>Hello  </text>@Session["UserName"]</span>
+                    }
+                </li>
+                <li><a href="@Url.Action("Logout", "LoginUser")"><i class="fas fa-sign-out-alt"></i></a></li>
+
+            </ul>
+        </div>
+    </section>
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="../Content/sources/Pro/811c06c748214cdf90f8747bc1e87799jILaNKsrO6HpXxdj-0.jpg" width="50%" id="MainImg">
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="../Content/sources/Pro/811c06c748214cdf90f8747bc1e87799jILaNKsrO6HpXxdj-0.jpg" width="50%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="../Content/sources/Pro/370218590_887965675595704_646111386393386377_n.jpg" width="50%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="~/Content/sources/Pro/aokhoac.jpg" width="50%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="~/Content/sources/Pro/khoacsau.jpg" width="50%" class="small-img">
+                </div>
+            </div>
+        </div>
+        <div class="single-pro-details">
+            <h6>Home / T-Shirt</h6>
+            <h4>Men's Fashion T Shirt</h4>
+            <h2 style="color: #000000;">$24</h2>
+            <select>
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+
+            </select>
+            <input type="number" value="1">
+            <button class="normal">Add To Cart</button>
+            <h4>Product Details</h4>
+            <span>T-shirt with a round neckline and short sleeves. Contrast prints on the front and back.</span>
+        </div>
+    </section>
+    <section id="products-f" class="section-p1">
+        <h5>Features Products</h5>
+        <p3>New Collection</p3>
+        <div class="pro-container">
+
+            <div class="pro">
+                <img src="../Content/sources/Pro/370218590_887965675595704_646111386393386377_n.jpg">
+                <div class="des">
+                    <span>Kara</span>
+                    <h5>Basic red t-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$24</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="../Content/sources/Pro/370218590_887965675595704_646111386393386377_n.jpg">
+                <div class="des">
+                    <span>Kara</span>
+                    <h5>Basic red t-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$24</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="../Content/sources/Pro/370218590_887965675595704_646111386393386377_n.jpg">
+                <div class="des">
+                    <span>Kara</span>
+                    <h5>Basic red t-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$24</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="../Content/sources/Pro/370218590_887965675595704_646111386393386377_n.jpg">
+                <div class="des">
+                    <span>Kara</span>
+                    <h5>Basic red t-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$24</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="../Content/sources/images/logo-black.png" width="100" height="100" alt="">
+            <h7>Contact</h7>
+            <p3>
+                <strong>Address: </strong>2443 Sierra Nevada Road, Mammoth Lakes CA 93546
+            </p3>
+            <p3>
+                <strong>Phone:</strong> kara:0704856946 genti:0967285710
+            </p3>
+            <p3><strong>Hours: </strong>10:00 - 18:00.Mon-Sat</p3>
+            <div class="follow">
+                <h7>follow us</h7>
+                <div class="icon">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h7>About</h7>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h7>My Account</h7>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col-install">
+            <p3>Install App</p3>
+            <p3>From App Store or Google Play</p3>
+            <div class="row">
+                <img src="../Content/sources/dowload/App_Store_(iOS)-Badge-Alternative-Logo.wine.png" width="200" height="150">
+                <img src="../Content/sources/dowload/Google_Play-Badge-Logo.wine.png" width="200" height="150">
+            </div>
+            <p3> Secured Payment Gateways </p3>
+            <img src="../Content/sources/dowload/small.jpg">
+
+        </div>
+        <div class="copyright">
+            <p3> 2023, AE206 etc - HTML CSS Ecommerce Template</p3>
+        </div>
+        @RenderBody()
+
+    </footer>
+    <script>
+    var MainImg = document.getElementById("MainImg");
+    var smallimg = document.getElementsByClassName("small-img")
+
+    smallimg[0].onclick = function(){
+        MainImg.src=smallimg[0].src;
+
+    }
+    smallimg[1].onclick = function(){
+        MainImg.src=smallimg[1].src;
+
+    }
+    smallimg[2].onclick = function(){
+        MainImg.src=smallimg[2].src;
+
+    }
+    smallimg[3].onclick = function(){
+        MainImg.src=smallimg[3].src;
+
+    }
+    </script>
+    <script src="~/Scripts/script .js"></script>
+</body>
+</html>
